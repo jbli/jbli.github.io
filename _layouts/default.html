@@ -1,44 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
-    </head>
-    <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                网兵<br />
-                运维工程师<br />
-                jinbangli@gmail.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/jbli">github.com/jbli</a><br />
-                <a href="http://weibo.com/u/2104168963">我的微博</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-    </body>
-</html>
+{% include header.html  %}
+	<div class="main">
+		<div class="content radius left">
+			{{ content}}
+		</div>
+		<div class="sidebar left">
+		{% include sidebar.html  %}
+		{% include side_categorys.html  %}
+		{% include side_links.html  %}
+		</div>
+	</div>
+{% include footer.html  %}
