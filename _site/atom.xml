@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
    <title>Jekyll Theme</title>
-   <link href="http://jbli.github.io//atom.xml" rel="self" type="application/atom+xml"/>
-   <link href="http://jbli.github.io/" rel="alternate" type="text/html" />
-   <updated>2014-03-14T22:55:21+08:00</updated>
-   <id>http://jbli.github.io/</id>
+   <link href="/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="" rel="alternate" type="text/html" />
+   <updated>2014-03-14T23:59:52+08:00</updated>
+   <id></id>
    <author>
      <name>网兵</name>
      <email>jinbangli@gmail.com</email>
@@ -14,9 +14,9 @@
    
    <entry>
      <title>测试!</title>
-     <link href="http://jbli.github.io//%E6%B5%8B%E8%AF%95/2014/03/14/%E6%B5%8B%E8%AF%95.html"/>
+     <link href="/%E6%B5%8B%E8%AF%95/2014/03/14/%E6%B5%8B%E8%AF%95.html"/>
      <updated>2014-03-14T14:14:40Z</updated>
-     <id>http://jbli.github.io//%E6%B5%8B%E8%AF%95/2014/03/14/测试</id>
+     <id>/%E6%B5%8B%E8%AF%95/2014/03/14/测试</id>
      <content type="html">&lt;p&gt;我的第一篇文章。&lt;/p&gt;
 
 &lt;p&gt;高亮&lt;/p&gt;
@@ -35,19 +35,77 @@
    </entry>
    
    <entry>
+     <title>利用jekyll在github上建个人博客</title>
+     <link href="/tools/2014/03/14/%E5%88%A9%E7%94%A8jekyll%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
+     <updated>2014-03-14T14:14:40Z</updated>
+     <id>/tools/2014/03/14/利用jekyll在github上建个人博客</id>
+     <content type="html">&lt;h2&gt;jekyll安装和使用&lt;/h2&gt;
+
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;~ $ gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;基本使用&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;~ $ gem install jekyll
+~ $ jekyll new myblog
+~ $ cd myblog
+~/myblog $ jekyll serve
+# =&amp;gt; Now browse to http://localhost:4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;主题模板&lt;/h2&gt;
+
+&lt;p&gt;通过 jekyll new 生成的模板比较简陋，网上有许多jekyll 主题的模板，找一款自己喜欢的。&lt;br&gt;
+如：
+- &lt;a href=&quot;http://www.zhanxin.info/themes.html&quot;&gt;掌心&lt;/a&gt;, 我现在使用的是它的Kunka，源码在github上，可点击&lt;a href=&quot;https://github.com/pizn/kunka&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;Kunka使用&lt;/h3&gt;
+
+&lt;p&gt;注意一定要修改&lt;em&gt;config.yml中#Site config部分url，其它地方修改根据自己的需求来定。&lt;br&gt;
+把自己的博客文章放到&lt;/em&gt;posts目录下，文件名称格式为 &amp;quot;2014-03-14-xxxxx.md&amp;quot;&lt;/p&gt;
+
+&lt;h2&gt;测试&lt;/h2&gt;
+
+&lt;p&gt;进入到博客的根目录下， 执行&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;通过浏览器在127.0.0.1:400 查看&lt;/p&gt;
+
+&lt;h2&gt;在github创建仓库&lt;/h2&gt;
+
+&lt;p&gt;在github上创建仓库 https://github.com/xxx/xxx.github.io, 其中xxx为仓库用户名。&lt;br&gt;
+把本地编辑好的博客目录上传到github的xxx.github.io下。&lt;br&gt;
+然后通过访问 xxx.github.io ，即可看到个人博客内容。&lt;/p&gt;
+
+&lt;h2&gt;注意&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如查修改博客的内容并上传到github上，但查看xxx.github.io，修改的内容不能显现出来，原因很可能是 博客的语法或格式有问题， 在本地执行 jekyll serve, 一般就会指出错误原因&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;资源&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;jelly官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllcn.com/docs/home/&quot;&gt;jelly官网的中文翻译&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pizn/kunka&quot;&gt;kunka主题模板&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+   </entry>
+   
+   <entry>
      <title>kunka 主题归来</title>
-     <link href="http://jbli.github.io//%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back.html"/>
+     <link href="/%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back.html"/>
      <updated>2013-08-11T12:55:11Z</updated>
-     <id>http://jbli.github.io//%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back</id>
+     <id>/%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back</id>
      <content type="html">&lt;p&gt;很久之前就把视觉稿画好了，周末有时间，把它给写了出来。下面介绍下 Kunka 主题。&lt;/p&gt;
 </content>
    </entry>
    
    <entry>
      <title>TYPO.CSS</title>
-     <link href="http://jbli.github.io//%E4%BB%8B%E7%BB%8D/2012/08/10/typo-css.html"/>
+     <link href="/%E4%BB%8B%E7%BB%8D/2012/08/10/typo-css.html"/>
      <updated>2012-08-10T12:55:11Z</updated>
-     <id>http://jbli.github.io//%E4%BB%8B%E7%BB%8D/2012/08/10/typo-css</id>
+     <id>/%E4%BB%8B%E7%BB%8D/2012/08/10/typo-css</id>
      <content type="html">&lt;h2 id=&quot;tagline&quot;&gt;一致化浏览器排版效果，构建最适合中文阅读的网页排版&lt;/h2&gt;
 
 &lt;ol id=&quot;table&quot;&gt;

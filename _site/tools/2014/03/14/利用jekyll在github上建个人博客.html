@@ -11,7 +11,7 @@
          **
         -->
         <meta charset="utf-8">
-        <title>Archives - Jekyll Theme</title>
+        <title>利用jekyll在github上建个人博客 - Jekyll Theme</title>
         <!-- meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="generator" content="Jekyll" />
@@ -69,9 +69,7 @@
                         
                         
                         
-                          
-                        
-                        <li class="nav-item nav-item-active">
+                        <li class="nav-item ">
                             <a href="/archives.html">
                                 文章归档
                             </a>
@@ -118,42 +116,81 @@
         <div class="contain fn-clear">
             <div class="container fn-clear">
                 <div class="main">
-                    <div class="article">
-    <h3 class="title">Archives</h3>
-    
-    <ul class="article-year" data-year="now">
-        
-            
-            
-                
-    </ul>
-    <ul class="article-year" data-year="2014">
-            
-        <li class="fn-clear"><span>Mar 14</span><a href="/%E6%B5%8B%E8%AF%95/2014/03/14/%E6%B5%8B%E8%AF%95.html">测试!</a></li>
-        
-            
-            
-        <li class="fn-clear"><span>Mar 14</span><a href="/tools/2014/03/14/%E5%88%A9%E7%94%A8jekyll%E5%9C%A8github%E4%B8%8A%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">利用jekyll在github上建个人博客</a></li>
-        
-            
-            
-                
-    </ul>
-    <ul class="article-year" data-year="2013">
-            
-        <li class="fn-clear"><span>Aug 11</span><a href="/%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back.html">kunka 主题归来</a></li>
-        
-            
-            
-                
-    </ul>
-    <ul class="article-year" data-year="2012">
-            
-        <li class="fn-clear"><span>Aug 10</span><a href="/%E4%BB%8B%E7%BB%8D/2012/08/10/typo-css.html">TYPO.CSS</a></li>
-        
-    </ul>
-</div>
+                    <div class="article article-post">
+    <h2 class="title">利用jekyll在github上建个人博客</h2>
+    <div class="info">
+        <span class="info-title"><i class="icon-calendar"></i> Published: </span>
+        <span class="info-date">14 Mar 2014</span>
+        <span class="info-title"><i class="icon-folder-open"></i> Category: </span>
+        <span class="info-link"><a href="/categories.html#-ref" ></a></span>
+    </div>
+    <h2>jekyll安装和使用</h2>
 
+<h2>安装</h2>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">~ $ gem install jekyll
+</code></pre></div>
+<h2>基本使用</h2>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">~ $ gem install jekyll
+~ $ jekyll new myblog
+~ $ cd myblog
+~/myblog $ jekyll serve
+# =&gt; Now browse to http://localhost:4000
+</code></pre></div>
+<h2>主题模板</h2>
+
+<p>通过 jekyll new 生成的模板比较简陋，网上有许多jekyll 主题的模板，找一款自己喜欢的。<br>
+如：
+- <a href="http://www.zhanxin.info/themes.html">掌心</a>, 我现在使用的是它的Kunka，源码在github上，可点击<a href="https://github.com/pizn/kunka">下载</a></p>
+
+<h3>Kunka使用</h3>
+
+<p>注意一定要修改<em>config.yml中#Site config部分url，其它地方修改根据自己的需求来定。<br>
+把自己的博客文章放到</em>posts目录下，文件名称格式为 &quot;2014-03-14-xxxxx.md&quot;</p>
+
+<h2>测试</h2>
+
+<p>进入到博客的根目录下， 执行</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">jekyll serve
+</code></pre></div>
+<p>通过浏览器在127.0.0.1:400 查看</p>
+
+<h2>在github创建仓库</h2>
+
+<p>在github上创建仓库 https://github.com/xxx/xxx.github.io, 其中xxx为仓库用户名。<br>
+把本地编辑好的博客目录上传到github的xxx.github.io下。<br>
+然后通过访问 xxx.github.io ，即可看到个人博客内容。</p>
+
+<h2>注意</h2>
+
+<ul>
+<li>如查修改博客的内容并上传到github上，但查看xxx.github.io，修改的内容不能显现出来，原因很可能是 博客的语法或格式有问题， 在本地执行 jekyll serve, 一般就会指出错误原因</li>
+</ul>
+
+<h2>资源</h2>
+
+<ul>
+<li><a href="http://jekyllrb.com/docs/home/">jelly官网</a></li>
+<li><a href="http://jekyllcn.com/docs/home/">jelly官网的中文翻译</a></li>
+<li><a href="https://github.com/pizn/kunka">kunka主题模板</a></li>
+<li><a href="http://pages.github.com/">GitHub Pages</a></li>
+</ul>
+
+    <nav class="article-previous fn-clear">
+        
+        <a class="prev" href="/%E4%B8%BB%E9%A2%98/2013/08/11/kunka-back.html" rel="bookmark">&laquo;&nbsp;kunka 主题归来</a>
+        
+        
+        <a class="next" href="/%E6%B5%8B%E8%AF%95/2014/03/14/%E6%B5%8B%E8%AF%95.html" rel="bookmark">测试!&nbsp;&raquo;</a>
+        
+    </nav>
+    <div class="comment">
+        
+            
+            <div class="ds-thread"></div>
+            
+        
+    </div>
+</div>
 
                 </div>
                 <div class="aside">
@@ -212,6 +249,22 @@
             </div>
         </div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        
+            
+                
+                <script type="text/javascript">
+                    var duoshuoQuery = {short_name:"zhanxin"};
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';ds.async = true;
+                        ds.src = 'http://static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0]
+                        || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                
+            
         
     </body>
 </html>
