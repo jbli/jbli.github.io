@@ -5,9 +5,9 @@ paginate: 8
 safe:  false
 
 #Site config
-title: Jekyll Theme
-description: Just another Jekyll theme design and code by zhanxin.info.
-keywords: Jekyll Theme
+title: 网兵的blog
+description: 记录工作生活中点点滴滴.
+keywords: blog
 url: http://jbli.github.io/
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png

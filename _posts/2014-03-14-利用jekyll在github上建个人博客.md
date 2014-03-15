@@ -32,7 +32,14 @@ jekyll安装和使用
 - [掌心](http://www.zhanxin.info/themes.html), 我现在使用的是它的Kunka，源码在github上，可点击[下载](https://github.com/pizn/kunka)
 
 ### Kunka使用
-注意一定要修改_config.yml中#Site config部分url，其它地方修改根据自己的需求来定。<br>
+注意一定要修改部分_config.yml中
+
+- #Site config部分url，
+- follow部分url
+- googleAnaly部分id
+- #comment config部分的id 
+- 其它地方修改根据自己的需求来定。
+
 把自己的博客文章放到_posts目录下，文件名称格式为 "2014-03-14-xxxxx.md"
 
 ##测试
