@@ -7,9 +7,9 @@ tags:  jekyll  github 博客
 ---
 利用jekyll在github上建个人博客的优势: 
 
-1.  github做版本管理
-2.  jekyll灵活定制博客主题风格
-3.  入手足够的简单
+- github做版本管理
+- jekyll灵活定制博客主题风格
+- 入手足够的简单
 
 
 jekyll安装和使用
