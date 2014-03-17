@@ -5,6 +5,10 @@ date:   2014-03-17 18:14:40
 categories:  ubuntu 
 tags:  U盘 安装 
 ---
+##背景
+用U盘安装ubuntu经常会遇到如下报错:
+
+![安装报错](/images/ubuntu_install_err01.jpg)
 
 ##准备
 1. 下载ubuntu server的ios
