@@ -8,9 +8,7 @@ tags:  U盘 安装
 
 ##准备
 1. 下载ubuntu server的ios
-2.  usb写镜像的工具，这两个差不多，都支持ubuntu server
--  [YUMI Multiboot USB Creator](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
-- [unetbootin](http://unetbootin.sourceforge.net/)
+2.  usb写镜像的工具，[YUMI Multiboot USB Creator](http://www.pendrivelinux.com/yumi-multiboot-usb-creator/)和 [unetbootin](http://unetbootin.sourceforge.net/) 这两个差不多，都支持ubuntu server
 3. window7系统环境
 4. U盘
 
@@ -26,14 +24,19 @@ An error(1) occurred while executing syslinux. Your USB drive won’t be bootabl
 ```
 
 解决办法:
+
 1. 关闭win7下的杀毒软件
 2.  U盘提前格式化，在用YUMI制作镜像时不要勾选"Format H:Drive(Erase Content)?"
 
 ##安装
-选择第二行
+选择第二行<br>
+![安装界面](/images/YUMI-Boot-Menu.png)
 
 ##所遇到问题
-系统启动时卡在 initranfs, 输入 exit 后回车，可以进入系统<br>
+系统启动时卡在 initranfs
+![initranfs](/images/ubuntu_grub_initramfs.jpg)
+
+输入 exit 后回车，可以进入系统<br>
 把/boot/grub/grub.cfg中
 
 ```
