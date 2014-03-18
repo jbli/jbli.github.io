@@ -8,7 +8,7 @@ safe:  false
 title: 网兵的blog
 description: 记录工作生活中点点滴滴.
 keywords: blog
-url: http://jbli.github.io
+#url: http://jbli.github.io
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png
 
