@@ -22,7 +22,7 @@ jekyll安装和使用
 ~ $ gem install jekyll
 ~ $ jekyll new myblog
 ~ $ cd myblog
-~/myblog $ jekyll serve
+~/myblog $ jekyll serve --watch
 # => Now browse to http://localhost:4000
 ```
 
