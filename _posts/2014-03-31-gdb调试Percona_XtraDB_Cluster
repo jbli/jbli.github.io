@@ -1,0 +1,35 @@
+
+---
+layout: post
+title:  "gdb调试Percona-XtraDB-Cluster-5.6"
+date:   2014-03-31 14:14:40
+categories: mysql
+tags:  调试  gdb
+---
+##安装
+参考[这里](http://www.percona.com/doc/percona-xtradb-cluster/5.6/installation/compiling_xtradb_cluster.html)
+###下载源码
+###安装依赖包
+
+```
+apt-get install build-essential flex bison automake autoconf bzr libtool cmake libaio-dev mysql-client libncurses-dev zlib1g-dev
+```
+###编译
+修改Percona-XtraDB-Cluster-5.6.15/BUILD/compile-pentium-debug,添加“-DCMAKE_INSTALL_PREFIX”
+
+```
+path=`dirname $0`
+cmake $path/.. -DWITH_DEBUG=1 -DCMAKE_INSTALL_PREFIX=/data/Percona-XtraDB-Cluster-5.6.15
+make
+```
+报错如下
+
+```
+/data/source/Percona-XtraDB-Cluster-5.6.15/storage/innobase/lock/lock0lock.cc: In function ‘trx_id_t lock_deadlock_check_and_resolve(const ib_lock_t*, const trx_t*)’:
+/data/source/Percona-XtraDB-Cluster-5.6.15/storage/innobase/lock/lock0lock.cc:4316:24: error: suggest braces around empty body in an ‘else’ statement [-Werror=empty-body]
+cc1plus: all warnings being treated as errors
+make[2]: *** [storage/innobase/CMakeFiles/innobase.dir/lock/lock0lock.cc.o] Error 1
+make[1]: *** [storage/innobase/CMakeFiles/innobase.dir/all] Error 2
+make: *** [all] Error 2
+```
+按照提示，把storage/innobase/lock/lock0lock.cc下文件的第4316行注释掉重新编译。
