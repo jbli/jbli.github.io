@@ -99,7 +99,7 @@ apt-get update
 
 ##加入常用的第三方源
 ###加入percona源
-参考(这里)[http://www.percona.com/doc/percona-xtrabackup/2.1/installation/apt_repo.html]
+参考[这里](http://www.percona.com/doc/percona-xtrabackup/2.1/installation/apt_repo.html)
 
 在服务器端执行下面命令加入该源的key
 ```
