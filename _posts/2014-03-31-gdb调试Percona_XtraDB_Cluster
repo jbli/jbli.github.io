@@ -22,6 +22,12 @@ path=`dirname $0`
 cmake $path/.. -DWITH_DEBUG=1 -DCMAKE_INSTALL_PREFIX=/data/Percona-XtraDB-Cluster-5.6.15
 make
 ```
+然后编译
+
+```
+sh  compile-pentium-debug
+```
+
 报错如下
 
 ```
@@ -32,4 +38,12 @@ make[2]: *** [storage/innobase/CMakeFiles/innobase.dir/lock/lock0lock.cc.o] Erro
 make[1]: *** [storage/innobase/CMakeFiles/innobase.dir/all] Error 2
 make: *** [all] Error 2
 ```
-按照提示，把storage/innobase/lock/lock0lock.cc下文件的第4316行注释掉重新编译。
+按照提示，把storage/innobase/lock/lock0lock.cc下文件的第4316行注释掉重新编译。现重新执行
+
+```
+sh  compile-pentium-debug
+make install
+```
+
+
+
