@@ -138,3 +138,68 @@ apt-get update
 ###其它常用第三方源
 - [puppet](https://apt.puppetlabs.com/README.txt)
 - [docker](http://docs.docker.io/en/latest/installation/ubuntulinux/)
+
+###加入个人的deb源
+在服务器上需要安装 dpkg-de
+
+```
+apt-get install dpkg-dev  
+gpg --gen-key 
+```
+在客户端/etc/apt/sources.list
+
+```
+deb http://10.10.130.11:9001/mirror/apt.snowballfinance.com/ /
+```
+执行
+
+```
+apt-get update
+```
+会报如下错误
+
+```
+W: GPG error: http://10.10.130.11  Release: The following signatures couldn't
+be verified because the public key is not available: NO_PUBKEY
+CE26643CD26F3745
+```
+在服务器端
+
+```
+gpg --list-keys
+```
+会得到如下内容
+```
+----------------------------------
+pub   2048R/D26F3745 2014-04-14
+uid                  apt.snowballfinance.com <lijb@xueqiu.com>
+sub   2048R/2446DD43 2014-04-14
+```
+
+执行
+
+```
+gpg -a --export D26F3745 |  apt-key add -  
+```
+
+然后把服务器端的把/etc/apt/trusted.gpg 拷到客户端，再在客户端执行
+
+```
+apt-get update
+```
+
+注意：
+以后对个人源的包 加入一个的包或删除一个包，都要以特定用户重新执行如下
+
+```
+dpkg-scanpackages ./ >Packages
+apt-ftparchive release ./ >Release
+gpg --clearsign -o InRelease Release
+gpg -abs -o Release.gpg Release
+```
+如果报如下错,注意检查该用户家目录下是否.gnupg
+
+```
+gpg: no default secret key: secret key not available
+gpg: Release: clearsign failed: secret key not available
+```
